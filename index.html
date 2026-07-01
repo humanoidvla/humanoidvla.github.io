@@ -78,25 +78,9 @@ action-flow stages.The final action chunk is executed by the robot-specific low-
 
 
 <!-- Single Video Gallery Section (2×3 grid, no image tags) -->
-<div class="video-gallery-section" id="traversingGallerySection">
-  <div class="video-gallery-container">
-    <div class="video-gallery" id="videoGalleryTraversing">
-      <video class="gallery-video" src="./static/videos/artimanip.mp4" autoplay muted playsinline loop></video>
-      <video class="gallery-video" src="./static/videos/assembly.mp4" autoplay muted playsinline loop></video>
-      <video class="gallery-video" src="./static/videos/chicken.mp4" autoplay muted playsinline loop></video>
-      <video class="gallery-video" src="./static/videos/flipcup.mp4" autoplay muted playsinline loop></video>
-      <video class="gallery-video" src="./static/videos/closedrawer.mp4" autoplay muted playsinline loop></video>
-      <video class="gallery-video" src="./static/videos/bread.mp4" autoplay muted playsinline loop></video>
-    </div>
-  </div>
-  <div class="gallery-caption-container">
-    <p class="figure-caption gallery-caption">
-        <b>Six real-world loco-manipulation tasks.</b> We use the TianGong humanoid robot, equipped with built-in cameras and a 30-DoF upper body, to perform three real-world tasks: PushDraw, ToastBread, CloseLid.
-    </p>
-  </div>
-    </div>
+
   <!-- End Video Gallery Section -->
-    <div class="tagline" id="approach">Approach.</div>
+    <div class="tagline" id="approach"> Hierarchical Action Flow.</div>
 
     <div class="r2s-vertical-layout">
       <div class="r2s-video-row r2s-top-row">
@@ -106,27 +90,12 @@ action-flow stages.The final action chunk is executed by the robot-specific low-
         <p class="r2s-caption-item">Model Overview</p>
       </div>
       <p class="figure-caption">
-        <b>FVP mainly consists of two parts: a 3D visual encoder and a point cloud diffusion model. The 3D visual encoder transforms the point cloud
-          at time step t into the latent visual representation, and the diffusion model uses the latent visual
-          representation and robotic actions to predict the point cloud at step time t+1. During the policy
-          learning stage, we train the pre-trained visual model and the policy backbone jointly.</b>
+        <b> Progressive action decomposition over a shared global humanoid action space.</b> The active action dimensions are expanded from locomotion and head control to waist refinement and
+finally to full-body manipulation.
       </p>
     </div>
 
-    <div class="tagline" id="approach">Real-World Results.</div>
-
-    <div class="r2s-vertical-layout">
-      <div class="r2s-video-row r2s-top-row">
-        <img class="r2s-video-item r2s-video-input" src="./static/images/realworld.png" autoplay muted loop playsinline></img>
-      </div>
-      <p class="figure-caption">
-        <b>"DP3+FVP" and "RISE+FVP" denote the application of FVP to pretrain the visual models from DP3 and RISE,
-          respectively. "DP3" indicates that the visual model within DP3 has not undergone pretraining. "DP3+PointMAE", "DP3+STRL", and
-   "DP3+C2P" signify the utilization of PointMAE, STRL, and C2P to pre-train the visual model from DP3. The numbers before the comma
-   represent the performance using in-domain datasets for pre-training, while the numbers after the comma represent the performance using
-   out-of-domain datasets (RoboMind) for pre-training.</b>
-      </p>
-    </div>
+    
 
     <div class="tagline" id="approach">Visualizing the Diffusion Process of Dexterous Hand Tasks.</div>
     <!-- Row 1 -->
@@ -165,81 +134,9 @@ action-flow stages.The final action chunk is executed by the robot-specific low-
       </div>
     </div>
     
-    <div class="tagline" id="approach">Enhancing Effect of FVP on VLA Model Tasks.</div>
+   
 
-    <!-- Task 1 -->
-    <div class="video-gallery-container">
-      <h2 class="video-gallery-title">PutBox</h2>
-      <div class="video-gallery" id="videoGallerySitting">
-        <div class="video-item">
-          <h3 class="video-title">RDT</h3>
-          <video class="gallery-video" src="./static/videos/dp_fr_1.mp4" autoplay muted loop playsinline></video>
-        </div>
-        <div style="width: 40px;"></div>
-        <div class="video-item">
-          <h3 class="video-title">RDT+FVP</h3>
-          <video class="gallery-video" src="./static/videos/dp_fr_2.mp4" autoplay muted loop playsinline></video>
-        </div>
-      </div>
-    </div>
-
-    <!-- Task 2 -->
-    <div class="video-gallery-container">
-      <h2 class="video-gallery-title">StackBowl</h2>
-      <div class="video-gallery" id="videoGallerySitting">
-        <div class="video-item">
-          <h3 class="video-title">RDT</h3>
-          <video class="gallery-video" src="./static/videos/dp_wp_1.mp4" autoplay muted loop playsinline></video>
-        </div>
-        <div style="width: 40px;"></div>
-        <div class="video-item">
-          <h3 class="video-title">RDT+FVP</h3>
-          <video class="gallery-video" src="./static/videos/dp_wp_2.mp4" autoplay muted loop playsinline></video>
-        </div>
-      </div>
-    </div>
-
-    <!-- Task 3 -->
-    <div class="video-gallery-container">
-      <h2 class="video-gallery-title">WipePlate</h2>
-      <div class="video-gallery" id="videoGallerySitting">
-        <div class="video-item">
-          <h3 class="video-title">RDT</h3>
-          <video class="gallery-video" src="./static/videos/dp_wh_1.mp4" autoplay muted loop playsinline></video>
-        </div>
-        <div style="width: 40px;"></div>
-        <div class="video-item">
-          <h3 class="video-title">RDT+FVP</h3>
-          <video class="gallery-video" src="./static/videos/dp_wh_2.mp4" autoplay muted loop playsinline></video>
-        </div>
-      </div>
-    </div>
-
-    <!-- Task 4 -->
-    <div class="video-gallery-container">
-      <h2 class="video-gallery-title">Long-horizon Task</h2>
-      <div class="video-gallery" id="videoGallerySitting">
-        <div class="video-item">
-          <h3 class="video-title">RDT</h3>
-          <video class="gallery-video" src="./static/videos/dp_lr_1.mp4" autoplay muted loop playsinline></video>
-        </div>
-        <div style="width: 40px;"></div>
-        <div class="video-item">
-          <h3 class="video-title">RDT+FVP</h3>
-          <video class="gallery-video" src="./static/videos/dp_lr_2.mp4" autoplay muted loop playsinline></video>
-        </div>
-      </div>
-    </div>
-
-  <div class="bibtex-code">
-    <div class="bibtex-title">BibTeX</div>
-    <pre><code>@article{cheng2025fvp,
-    author    = {Chengkai Hou and Yanjie Ze and Yankai Fu and Zeyu Gao and Yue Yu and Songbo Hu and Shanghang Zhang and Huazhe Xu},
-    title     = {FVP: 4D Visual Pre-training for Robot Learning},
-    journal   = {ICCV},
-    year      = {2025},
-  }</code></pre>
-  </div>
+  
   </div> <!-- End of main-content div -->
 
 
