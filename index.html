@@ -69,91 +69,31 @@
     <img src="./figs/teaser.png"></img>
     <!-- Caption for Figure 1 (Teaser Video) -->
     <p class="figure-caption">
-       Overall framework of HAF-VLA. Given visual observations,robotstates,and language instructions,themodel progressively generates whole-body action trajectories through hierarchical 
+       <b> Overall framework of HAF-VLA.</b> Given visual observations,robotstates,and language instructions,themodel progressively generates whole-body action trajectories through hierarchical 
 action-flow stages.The final action chunk is executed by the robot-specific low-level control interface.
     </p>
 
     <div class="tagline" id="deploy-in-real">Real-world Demo.</div>
 
-    <!-- Video Gallery Section - STAIRS VIDEOS -->
-    <div class="video-gallery-section" id="stairsGallerySection">
-      <div class="video-gallery-container">
-        <div class="video-gallery" id="videoGalleryStairs">
-          <!-- Videos remain here - ADD autoplay -->
-          <img class="gallery-video" src="./static/images/head.jpg" autoplay muted playsinline loop></img>
-          <video class="gallery-video" src="./static/videos/artimanip.mp4" autoplay muted playsinline loop></video>
-          <video class="gallery-video" src="./static/videos/assembly.mp4" autoplay muted playsinline loop></video>
-          <video class="gallery-video" src="./static/videos/chicken.mp4" autoplay muted playsinline loop></video>
-          <video class="gallery-video" src="./static/videos/flipcup.mp4" autoplay muted playsinline loop></video>
-          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
-        </div>
-      </div>
-      <!-- Container for the caption AND buttons -->
-      <div class="gallery-caption-container">
-          <!-- Move button controls INSIDE caption container -->
-          <div class="gallery-nav-controls">
-              <button class="gallery-nav left" id="scrollLeftBtnStairs">&lt;</button>
-              <button class="gallery-nav right" id="scrollRightBtnStairs">&gt;</button>
-          </div>
-          <!-- Caption text -->
-          <p class="figure-caption gallery-caption">
-              <b>UR5 Dexterous Hand:</b> UR5 single-arm is equipped with a LeapHand dexterous hand to complete four tasks: PickPlace, FlipCup, Assembly, Artimanip.
-          </p>
-      </div>
-    </div>
-  <!-- End Video Gallery Section -->
 
-  <!-- Video Gallery Section - SITTING VIDEOS -->
-  <div class="video-gallery-section" id="gallery-section-anchor">
-    <div class="video-gallery-container">
-      <div class="video-gallery" id="videoGallerySitting">
-        <!-- Videos remain here - ADD autoplay -->
-        <img class="gallery-video" src="./static/images/dual.jpg" autoplay muted playsinline loop></img>
-        <video class="gallery-video" src="./static/videos/dual_fruit.mp4" autoplay muted playsinline loop></video>
-        <video class="gallery-video" src="./static/videos/dual_cup.mp4" autoplay muted playsinline loop></video>
-        <video class="gallery-video" src="./static/videos/dual_wish.mp4" autoplay muted playsinline loop></video>
-        <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
-      </div>
-    </div>
-    <!-- Container for the caption AND buttons -->
-    <div class="gallery-caption-container">
-        <!-- Move button controls INSIDE caption container -->
-        <div class="gallery-nav-controls">
-            <button class="gallery-nav left" id="scrollLeftBtnSitting">&lt;</button>
-            <button class="gallery-nav right" id="scrollRightBtnSitting">&gt;</button>
-        </div>
-        <!-- Caption text -->
-        <p class="figure-caption gallery-caption">
-            <b>AgileX Dual-arm:</b> We use the AgileX Cobot Magic dual-arm robot to perform the three manipulation tasks: PutBox, StackBowl, WipePlate.
-        </p>
+
+<!-- Single Video Gallery Section (2×3 grid, no image tags) -->
+<div class="video-gallery-section" id="traversingGallerySection">
+  <div class="video-gallery-container">
+    <div class="video-gallery" id="videoGalleryTraversing">
+      <video class="gallery-video" src="./static/videos/artimanip.mp4" autoplay muted playsinline loop></video>
+      <video class="gallery-video" src="./static/videos/assembly.mp4" autoplay muted playsinline loop></video>
+      <video class="gallery-video" src="./static/videos/chicken.mp4" autoplay muted playsinline loop></video>
+      <video class="gallery-video" src="./static/videos/flipcup.mp4" autoplay muted playsinline loop></video>
+      <video class="gallery-video" src="./static/videos/closedrawer.mp4" autoplay muted playsinline loop></video>
+      <video class="gallery-video" src="./static/videos/bread.mp4" autoplay muted playsinline loop></video>
     </div>
   </div>
-  <!-- End Video Gallery Section -->
-
-  <!-- Video Gallery Section - TRAVERSING VIDEOS -->
-    <div class="video-gallery-section" id="traversingGallerySection">
-      <div class="video-gallery-container">
-        <div class="video-gallery" id="videoGalleryTraversing">
-          <!-- Videos remain here - ADD autoplay -->
-          <img class="gallery-video" src="./static/images/human.jpg" autoplay muted playsinline loop></img>
-          <video class="gallery-video" src="./static/videos/closedrawer.mp4" autoplay muted playsinline loop></video>
-          <video class="gallery-video" src="./static/videos/bread.mp4" autoplay muted playsinline loop></video>
-          <video class="gallery-video" src="./static/videos/closeclip.mp4" autoplay muted playsinline loop></video>
-          <!-- Add more videos as needed, ensuring they have autoplay muted loop -->
-        </div>
-      </div>
-      <!-- Container for the caption AND buttons -->
-      <div class="gallery-caption-container">
-          <!-- Move button controls INSIDE caption container -->
-          <div class="gallery-nav-controls">
-              <button class="gallery-nav left" id="scrollLeftBtnTraversing">&lt;</button>
-              <button class="gallery-nav right" id="scrollRightBtnTraversing">&gt;</button>
-          </div>
-          <!-- Caption text -->
-          <p class="figure-caption gallery-caption">
-              <b>TianGong Humanoid:</b> We use the TianGong humanoid robot, equipped with built-in cameras and a 30-DoF upper body, to perform three real-world tasks: PushDraw, ToastBread, CloseLid.
-          </p>
-      </div>
+  <div class="gallery-caption-container">
+    <p class="figure-caption gallery-caption">
+        <b>TianGong Humanoid:</b> We use the TianGong humanoid robot, equipped with built-in cameras and a 30-DoF upper body, to perform three real-world tasks: PushDraw, ToastBread, CloseLid.
+    </p>
+  </div>
     </div>
   <!-- End Video Gallery Section -->
     <div class="tagline" id="approach">Approach.</div>
