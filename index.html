@@ -60,20 +60,17 @@
 
     <div class="section">
       <p>
-        General visual representations learned from web-scale datasets for robotics have achieved great success in recent years, enabling data-efficient robot learning on manipulation tasks;
+      Humanoid robots face two core bottlenecks: existing vision-language-action (VLA) models cannot generate coordinated full-body motions, and offline training policies perform poorly on unseen out-of-distribution tasks. Direct online reinforcement learning on large VLA models also brings high computation and safety risks.
       </p>
       <p>
-       yet these pre-trained representations are mostly on 2D images, neglecting the inherent 3D nature of the world. However, due to the scarcity of large-scale 3D data, it is still hard to extract a universal 3D representation from web datasets. Instead, we seek for a general visual pre-training framework that could improve all 3D representations as an alternative. Our framework, called <b> FVP </b>, is a novel 4D Visual Pre-training framework for real-world robot learning. FVP frames the visual pre-training objective as a next-point-cloud-prediction problem, models the prediction model as a diffusion model, and pre-trains the model on in-domain task datasets directly. 
+      This work first designs a hierarchical whole-body VLA model for humanoids, which integrates visual perception, language understanding and full-body motion generation with kinematic constraints, and adopts a big-small brain structure for stable real-robot deployment. We further propose DSRL-DCT, an offline-to-online RL adaptation method. We freeze the pre-trained VLA model, reverse flow matching to map expert trajectories into latent noise space, and use DCT to compress the high-dimensional noise into low-dimensional coefficients for efficient RL optimization. The policy combines SAC reinforcement loss and BC imitation loss for stable offline pre-training and safe online fine-tuning.
       </p>
-      <p>
-       Across twelve real-world manipulation tasks, FVP boosts the average success rate of 3D Diffusion Policy (DP3) for these tasks by 28\%. The FVP pre-trained DP3 achieves state-of-the-art performance across imitation learning methods. Moreover, the efficacy of FVP adapts across various point cloud encoders and datasets. 
-      Finally, we apply FVP to the RDT-1B, a larger Vision-Language-Action robotic model, enhancing its performance on various robot tasks.
-      
     </div> 
     <img src="./figs/teaser.png"></img>
     <!-- Caption for Figure 1 (Teaser Video) -->
     <p class="figure-caption">
-        Different from prior works in Contrastive Learning, Masked Signal Modeling; FVP trains 3D visual representations by leveraging the preceding frame point cloud and employing a diffusion model to predict the point cloud of the current frame.
+       Overall framework of HAF-VLA. Given visual observations,robotstates,and language instructions,themodel progressively generates whole-body action trajectories through hierarchical 
+action-flow stages.The final action chunk is executed by the robot-specific low-level control interface.
     </p>
 
     <div class="tagline" id="deploy-in-real">Real-world Demo.</div>
