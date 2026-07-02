@@ -94,20 +94,7 @@ action-flow stages.The final action chunk is executed by the robot-specific low-
 finally to full-body manipulation.
       </p>
     </div>
-<div class="tagline" id="dsrl-dct"> DSRL-DCT: Latent Space Offline-to-Online RL Adaptation.</div>
 
-<div class="r2s-vertical-layout">
-  <div class="r2s-video-row r2s-top-row">
-    <img class="r2s-video-item r2s-video-input" src="./static/images/me.png" autoplay muted loop playsinline></img>
-  </div>
-  <div class="r2s-caption-row">
-    <p class="r2s-caption-item">DSRL-DCT Pipeline Overview</p>
-  </div>
-  <p class="figure-caption">
-    <b>Low-dimensional latent reinforcement learning for frozen hierarchical whole-body VLA models.</b> We invert flow matching to map offline expert motions into Stage-3 generation noise, compress high-dimensional temporal noise via DCT to retain only low-frequency coefficients, and train SAC policy over compact DCT latent space. Combined with BC imitation regularization, the method enables safe, sample-efficient online fine-tuning without updating large pre-trained humanoid VLA weights.
-  </p>
-</div>
-    
 
     
 
